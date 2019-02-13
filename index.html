@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Gregs List</title>
+</head>
+
+<body>
+  <section class="container-fluid">
+    <header class="row">
+      <div class="col text-center">
+        <h1>WELCOME TO GRAIGSLIST</h1>
+      </div>
+    </header>
+    <section>
+      <h3>Submit New Car:</h3>
+      <form class="py-1" onsubmit="app.controllers.carController.addCar(event)">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="description" placeholder="Description">
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="url" name="image URL" placeholder="Image" required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section>
+      <h3>Submit New House:</h3>
+      <form class="py-1" onsubmit="app.controllers.houseController.addHouse(event)">
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="number" name="price" placeholder="Price">
+        <input type="number" name="rooms" placeholder="Rooms">
+        <input type="url" name="img" placeholder="Image URL" required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section>
+      <h3>Submit New Job:</h3>
+      <form class="py-1" onsubmit="app.controllers.jobController.addJob(event)">
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="number" name="price" placeholder="Job Title">
+        <input type="number" name="rooms" placeholder="Salary">
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <h1><u>CARS:</u></h1>
+    <main class="row" id="available-cars"></main>
+    <h1><u>HOUSE</u></h1>
+    <main class="row" id="available-houses"></main>
+    <h1><u>JOBS:</u></h1>
+    <main class="row" id="available-jobs"></main>
+
+  </section>
+  <script type="module" src="app/main.js"></script>
+</body>
+
+</html>
